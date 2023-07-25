@@ -1,0 +1,38 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+% \usepackage[frenchb]{babel}
+
+\usetheme[block=fill]{metropolis}
+\include{umons-presets}
+
+\title{Presentation title}
+\author{Author name}
+\date{\today}
+\institute{
+    Département de Mathématique\\
+    Université de Mons
+    \vfill
+
+    \includegraphics[height=4ex]{UMONS}\hfill\raisebox{-1ex}{\includegraphics[height=6ex]{UMONS_FS}}
+}
+
+\begin{document}
+
+    \maketitle
+
+    \begin{frame}{Frame title}
+        \begin{block}{Block title}
+            Some text with an \alert{alert}.
+        \end{block}
+    \end{frame}
+
+    \section{A section}
+
+    \begin{frame}{Frame title 2}
+        \begin{block}{Block title 2}
+            Some text with a second \alert{alert}.
+        \end{block}
+    \end{frame}
+
+\end{document}

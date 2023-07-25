@@ -1,0 +1,34 @@
+%%
+%%  umons-presets.tex
+%%  Created by Martin Debaisieux on 07/06/2023.
+%%
+
+\definecolor{umons-red}{RGB}{168, 0, 57}
+\definecolor{umons-turquoise}{RGB}{0, 171, 204}
+\definecolor{umons-gray}{RGB}{150, 150, 150}
+
+% Choose your favorite color for the progress bar and alerts
+\setbeamercolor{alerted text}{fg=umons-turquoise}
+
+% Displays the progress bar and university logo on each frame
+\makeatletter
+    \setlength{\metropolis@frametitle@padding}{2.2ex}
+    \setbeamertemplate{frametitle}{%
+        \nointerlineskip%
+        \begin{beamercolorbox}[%
+            wd=\paperwidth,%
+            sep=0pt,%
+            leftskip=\metropolis@frametitle@padding,%
+            rightskip=\metropolis@frametitle@padding,%
+        ]{frametitle}%
+            \metropolis@frametitlestrut@start%
+            \insertframetitle%
+            \nolinebreak%
+            \metropolis@frametitlestrut@end%
+            \hfill
+            \raisebox{-.5mm}{\includegraphics[height=2ex,keepaspectratio]{UMONS}} % logo
+        \end{beamercolorbox}
+        \usebeamertemplate*{progress bar in head/foot}
+    }
+    \setlength{\metropolis@progressinheadfoot@linewidth}{2pt} % progress bar thickness
+\makeatother
